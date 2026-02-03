@@ -12,14 +12,23 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [8.4, 8.3, 8.2, 8.1]
-        cakephp: ['^5.0', '^4.5']
-        stability: [prefer-stable]
-        exclude:
-          - php: 8.1
+        include:
+          - php: 8.4
             cakephp: '^5.0'
+          - php: 8.4
+            cakephp: '^4.5'
+          - php: 8.3
+            cakephp: '^5.0'
+          - php: 8.3
+            cakephp: '^4.5'
+          - php: 8.2
+            cakephp: '^5.0'
+          - php: 8.2
+            cakephp: '^4.5'
+          - php: 8.1
+            cakephp: '^4.5'
 
-    name: PHP ${{ matrix.php }} - CakePHP ${{ matrix.cakephp }} - ${{ matrix.stability }}
+    name: PHP ${{ matrix.php }} - CakePHP ${{ matrix.cakephp }}
 
     steps:
       - name: Checkout code
@@ -35,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: |
           composer require "cakephp/cakephp:${{ matrix.cakephp }}" --no-interaction --no-update
-          composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+          composer update --prefer-stable --prefer-dist --no-interaction
 
       - name: Execute tests
         run: vendor/bin/phpunit
