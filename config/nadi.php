@@ -11,7 +11,7 @@ return [
             'http' => [
                 'apiKey' => env('NADI_API_KEY'),
                 'appKey' => env('NADI_APP_KEY'),
-                'endpoint' => env('NADI_ENDPOINT', 'https://api.nadi.pro'),
+                'endpoint' => env('NADI_ENDPOINT', 'https://nadi.pro/api'),
                 'version' => env('NADI_API_VERSION', 'v1'),
             ],
             'opentelemetry' => [

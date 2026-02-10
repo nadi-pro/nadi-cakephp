@@ -42,14 +42,14 @@ Sends monitoring data to the Nadi API. This is the primary driver for production
 NADI_DRIVER=http
 NADI_API_KEY=your-api-key
 NADI_APP_KEY=your-app-key
-NADI_ENDPOINT=https://api.nadi.pro
+NADI_ENDPOINT=https://nadi.pro/api
 ```
 
 | Option | Environment Variable | Default |
 |--------|---------------------|---------|
 | API key | `NADI_API_KEY` | (none, required) |
 | App key | `NADI_APP_KEY` | (none, required) |
-| Endpoint | `NADI_ENDPOINT` | `https://api.nadi.pro` |
+| Endpoint | `NADI_ENDPOINT` | `https://nadi.pro/api` |
 | API version | `NADI_API_VERSION` | `v1` |
 
 Configuration in `config/nadi.php`:
@@ -59,7 +59,7 @@ Configuration in `config/nadi.php`:
     'http' => [
         'apiKey' => env('NADI_API_KEY'),
         'appKey' => env('NADI_APP_KEY'),
-        'endpoint' => env('NADI_ENDPOINT', 'https://api.nadi.pro'),
+        'endpoint' => env('NADI_ENDPOINT', 'https://nadi.pro/api'),
         'version' => env('NADI_API_VERSION', 'v1'),
     ],
 ],

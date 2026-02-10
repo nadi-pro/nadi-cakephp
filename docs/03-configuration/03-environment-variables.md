@@ -15,7 +15,7 @@ Complete reference of all environment variables supported by the Nadi CakePHP SD
 |----------|---------|-------------|
 | `NADI_API_KEY` | (none) | API key for Nadi platform authentication |
 | `NADI_APP_KEY` | (none) | Application key for Nadi platform |
-| `NADI_ENDPOINT` | `https://api.nadi.pro` | Nadi API endpoint URL |
+| `NADI_ENDPOINT` | `https://nadi.pro/api` | Nadi API endpoint URL |
 | `NADI_API_VERSION` | `v1` | API version |
 
 ## Log Driver
